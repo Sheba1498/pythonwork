@@ -1,0 +1,32 @@
+# for i in range(1,10):
+#     print(i)
+#
+# for i in range(1,50,2):
+#     print(i)
+#
+# numbers=range(10,100)
+# for i in numbers:
+#     print(i)
+
+
+
+# numbers=range(10,0,-1)
+# for i in numbers:
+#     print(i)
+
+
+# for i in range(1,8):
+#     if i==5:
+#         break
+#     print(i)
+
+# num=8
+# flag=0
+# for i in range(2,num):
+#     if (num%i==0):
+#         flag=1
+#         break
+# if(flag==0):
+#     print("prime")
+# else:
+#     print("not prime")
