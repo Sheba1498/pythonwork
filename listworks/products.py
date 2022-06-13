@@ -13,28 +13,58 @@ mobiles=[
 
 ]
 # q1 total number of out_of_stock mobiles
-
+out_stock_pro=[mob for mob in mobiles if mob[-1]==0]
+print(len(out_stock_pro))
 
 # q2 total stock
+avl_stock=[mob[-1] for mob in mobiles]
+print(sum(avl_stock))
 
-# q3 pritn mobiles available in range 20k to 30k
+# q3 print mobiles available in range 20k to 30k
+mobile_price=[mob for mob in mobiles if mob[4] in range(20000,30000)]
+print(mobile_price)
 
 # q4 print all 5g phone
+mobiles_5g=[mob for mob in mobiles if mob[2]=="5g"]
+print(mobiles_5g)
 
 # q5 print samsung mobiles
+mobile_samsung=[mob for mob in mobiles if mob[-2]=="samsung"]
+print(mobile_samsung)
 
 # q6 print costly mobile
+# mobiles.sort(reverse=True,key=lambda mob:mob[4])
+# print(mobiles[0])
+
+costly_mobiles=max(mobiles,key=lambda mob:mob[4])
+print(costly_mobiles)
 
 # q7 prin low cost mobiles
+# mobiles.sort(key=lambda mob:mob[4])
+# print(mobiles[0])
+
+low_costly=min(mobiles,key=lambda mob:mob[4])
+print(low_costly)
 
 # q8 print all mobiles having stock >10
+stock_gt=[mob for mob in mobiles if mob[-1]>10]
+print(stock_gt)
+
 
 # q9 count of mobiles having dispaly amoled
+display=[mob for mob in mobiles if mob[3]=="AMOLED"]
+print(len(display))
 
 # q10 sort mobiles based on price oredr by desc
+mobiles.sort(reverse=True,key=lambda mob:mob[4])
+print(mobiles)
 
 # q11 sort mobiles based on avl stock oredr by desc
+mobiles.sort(reverse=True,key=lambda mob:mob[-1])
+print(mobiles)
 
 # q12 is there any mobile available at rs 10000 ?
+mob_ten=[mob[4]==10000 for mob in mobiles]
+print("available" if True in mob_ten else "not available" )
 
 # q12 list all mobiles having same price
